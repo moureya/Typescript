@@ -8,7 +8,18 @@
 </head>
 
 <body>
-    <script src="./modules/module_5/app.js"></script>
+    <script src="./node_modules/systemjs/dist/system.js"></script>
+    <script>
+        SystemJS.config({
+            baseURL: './modules/module_6',
+            packages: {
+                '/': {
+                    defualtExtension: 'js'
+                }
+            }
+        });
+        SystemJS.import('app.js');
+    </script>
 </body>
 
 </html>
